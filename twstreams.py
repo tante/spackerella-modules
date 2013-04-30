@@ -38,7 +38,8 @@ class TwitterListener(tweepy.StreamListener):
         self.willie.say(status)
 
 def configure(config):
-    """streams.streams must contain a comma separated list of hashtags or terms you want to follow on Twitter"""
+    """streams.streams must contain a comma separated list of hashtags or terms you want to follow on Twitter.
+    You have to set up the Twitter module because this app uses the same keys etc"""
     if config.option('Configure Streams?', False):
         config.interactive_add('streams', 'streams', 'Streams (commaseparated)')
 
